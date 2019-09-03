@@ -13,9 +13,8 @@
 <!-- evaluates expression to that property -->
 <!-- same as saying: <div textContent="{{name}}"></div> -->
 <div [textContent]="name"></div>
-
-<div>{{ mediaItem.year }}</div>
-<div class="tools">
+<!-- *ngIf is an example of a structural directive, can also use [ngIf] syntax -->
+<div *ngIf="mediaItem.watchedOn">{{ mediaItem.year }}</div> 
   <svg
     [mwFavorite]="mediaItem.isFavorite" 
     class="favorite" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
