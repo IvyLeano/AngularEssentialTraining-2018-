@@ -9,6 +9,12 @@ import { Component } from '@angular/core';
       selector: 'mw-app',                  // what angular uses to locate a custom html element and apply the component to
       template: '<h1>My App</h1><p>more writing</p>'       // inline template - to fill the targeted html element above, only for the first element (when it is the root module). For multiple lines use ``
       // template url allows us to load a specific file that contains the template content
+      // templateURL: 'app/app.component.html'
+      // can also use the stylesURLs: ['file path']: 
+      styles: [`        
+        h1 { color: #ffffff; }
+        .descritption { font-style: italics; }
+      `]
   }
 )
 
