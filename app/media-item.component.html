@@ -1,8 +1,19 @@
-<h2>{{ mediaItem.name }}</h2>
+<!-- Interpolation is seen below using the {{ }} -->
+<!-- assignments, newing up variables, chaining expressions and incrementing/decrementing are not supported in interpolation {{ }} -->
+<!-- the prefix of mediaItem. is not needed -->
+
+<!-- Below are ways to access data in angular -->
+<!-- 1. Interpolation -->
+<h2>{{ mediaItem.name }}</h2> 
 <template [ngIf]="mediaItem.watchedOn">
   <div>Watched on {{ mediaItem.watchedOn | date: 'shortDate' }}</div>
 </template>
-<div>{{ mediaItem.category }}</div>
+
+<!-- 2. data-binding -->
+<!-- evaluates expression to that property -->
+<!-- same as saying: <div textContent="{{name}}"></div> -->
+<div [textContent]="name"></div>
+
 <div>{{ mediaItem.year }}</div>
 <div class="tools">
   <svg
